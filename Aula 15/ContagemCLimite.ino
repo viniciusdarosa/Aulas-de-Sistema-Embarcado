@@ -10,8 +10,6 @@ bool ultimoA = 0;
 bool ultimoB = 0;
 bool estadoA = 0;
 bool estadoB = 0;
-int i = 0;
-
 
 void setup() {
   pinMode(botaoA, INPUT);
@@ -27,7 +25,7 @@ void loop() {
   estadoA = digitalRead(botaoA);
   if (estadoA != ultimoA){
     if (estadoA == 1){
-      if (contador < 15){
+      if (contador < 50){
         contador++;
         Serial.println(contador);
       }
@@ -45,35 +43,3 @@ void loop() {
     }
   }
   ultimoB = estadoB;
-
-  if (contador % 2 == 1 || contador == 1){
-    digitalWrite(led1, 1);
-  }
-  else{
-    digitalWrite(led1,0);
-  }
-
-  i =contador ;
-
-  if (i == 2||i == 3||i == 6||i == 7||i == 10||i == 11||i == 14||i == 15){
-    digitalWrite(led2, 1);
-  }
-  else{
-    digitalWrite(led2,0);
-  }
-
-  if ((contador / 4 >= 1 && contador / 4 < 2) || contador / 4 >=3 ){
-    digitalWrite(led3, 1);
-  }
-  else{
-    digitalWrite(led3,0);
-  }
-
-  if (contador>=8){
-    digitalWrite(led4, 1);
-  }
-  else{
-    digitalWrite(led4,0);
-  }
-
-}
