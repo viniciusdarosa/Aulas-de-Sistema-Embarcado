@@ -18,11 +18,11 @@ void loop() {
   digitalWrite(pin_led2, HIGH);
   digitalWrite(pin_led3, HIGH);
   digitalWrite(pin_led4, HIGH);
-  delay(1000);
+  delay(500);
   digitalWrite(pin_led1, LOW);
   digitalWrite(pin_led2, LOW);
   digitalWrite(pin_led3, LOW);
   digitalWrite(pin_led4, LOW);
-  delay(1000);
+  delay(500);
 
 }
