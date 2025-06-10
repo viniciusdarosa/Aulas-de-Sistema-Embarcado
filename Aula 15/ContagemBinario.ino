@@ -55,8 +55,17 @@ void loop() {
 
   i =contador ;
 
-  if (i == 2||i == 3||i == 6||i == 7||i == 10||i == 11||i == 14||i == 15){
+  /*if (i == 2||i == 3||i == 6||i == 7||i == 10||i == 11||i == 14||i == 15){
     digitalWrite(led2, 1);
+  }
+  else{
+    digitalWrite(led2,0);
+  }*/
+
+  //Forma mais facil
+
+  if (((conta>>2) % 2) == 1){
+     digitalWrite(led2, 1);
   }
   else{
     digitalWrite(led2,0);
